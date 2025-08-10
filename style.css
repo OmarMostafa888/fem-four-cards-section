@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+                            Custom properties
+   ========================================================================== */
+
+:root {
+  --font-family-base: "Poppins", sans-serif;
+
+  --card-border-color-red: hsl(0, 78%, 62%);
+  --card-border-color-cyan: hsl(180, 62%, 55%);
+  --card-border-color-orange: hsl(34, 97%, 64%);
+  --card-border-color-blue: hsl(212, 86%, 64%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-dark-gray: hsl(234, 12%, 34%);
+  --color-light-gray: hsl(212, 6%, 44%);
+}
+
+body {
+  font-family: var(--font-family-base);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  background-color: #fafafa;
+}
+
+/* ==========================================================================
+                            Services Section
+   ========================================================================== */
+
+.services {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+/* Services Header
+   ========================================================================== */
+
+.services__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.services__header-title {
+  font-weight: 200;
+  font-size: 2rem;
+  color: var(--color-light-gray);
+}
+
+.services__header-title span {
+  font-weight: 600;
+  color: var(--color-dark-gray);
+}
+
+.services__header-desc {
+  color: var(--color-dark-gray);
+  width: 40%;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.7rem;
+}
+
+/* Services Cards Grid
+   ========================================================================== */
+
+.services__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.services__card {
+  background-color: var(--color-white);
+  box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.137);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.services__card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--color-dark-gray);
+}
+
+.services__card-desc {
+  font-size: 0.9rem;
+  color: var(--color-light-gray);
+  width: 95%;
+  margin-bottom: 3rem;
+}
+
+.services__card svg {
+  align-self: flex-end;
+}
+
+.services__cards-column {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.services__card--cyan {
+  border-top: 5px solid var(--card-border-color-cyan);
+}
+
+.services__card--orange {
+  border-top: 5px solid var(--card-border-color-orange);
+}
+
+.services__card--red {
+  border-top: 5px solid var(--card-border-color-red);
+}
+
+.services__card--blue {
+  border-top: 5px solid var(--card-border-color-blue);
+}
+
+@media (max-width: 1114px) {
+  body {
+    padding: 2rem;
+  }
+
+  .services__header-desc {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .services__cards {
+    grid-template-columns: auto;
+  }
+
+  .services__header-title {
+    font-size: 1.4rem;
+  }
+
+  .services__header-desc {
+    width: 100%;
+  }
+}
