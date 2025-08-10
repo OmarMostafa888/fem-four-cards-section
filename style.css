@@ -111,6 +111,9 @@ body {
   row-gap: 2rem;
 }
 
+/* Services Cards Modifiers
+   ========================================================================== */
+
 .services__card--cyan {
   border-top: 5px solid var(--card-border-color-cyan);
 }
@@ -126,6 +129,10 @@ body {
 .services__card--blue {
   border-top: 5px solid var(--card-border-color-blue);
 }
+
+/* ==========================================================================
+                            Responsive Screens
+   ========================================================================== */
 
 @media (max-width: 1114px) {
   body {
